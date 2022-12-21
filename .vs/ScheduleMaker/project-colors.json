@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "0673477e-7dd2-488c-8193-5ff72617da9f": {
+      "ProjectGuid": "0673477e-7dd2-488c-8193-5ff72617da9f",
+      "DisplayName": "ScheduleMaker",
+      "ColorIndex": 0
+    },
+    "675602b1-373f-4261-be47-b6ececc9ea2a": {
+      "ProjectGuid": "675602b1-373f-4261-be47-b6ececc9ea2a",
+      "DisplayName": "Solution Items",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
