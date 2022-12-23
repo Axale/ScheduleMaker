@@ -8,10 +8,10 @@ using System.IO;
 namespace ScheduleMaker
 {
     internal class CourseIO {
-        string Path;
-        FileStream fs;
-        string filestring;
-        public bool Failed;
+        string Path { get; set; }
+        FileStream fs { get; set; }
+        public string filestring { get; set; }
+        public bool Failed { get; set; }
 
 
         public CourseIO(string Given_Path) {
@@ -27,39 +27,35 @@ namespace ScheduleMaker
                     Failed = true;
                 }
             }
+            byte[] buffer = new byte[(int) fs.Length];
+            fs.Read(buffer, 0, (int) fs.Length);
+            filestring = Encoding.ASCII.GetString(buffer);
+
 
         }
 
+        public void CleanUp() {
+            fs.Close();
+        }
+        public void WriteFile() {
+            fs.Seek(0, SeekOrigin.Begin);
+            byte[] buffer = new byte[filestring.Length];
+            buffer = ASCIIEncoding.ASCII.GetBytes(filestring);
+            fs.Write(buffer, 0, buffer.Length);
+        }
         // Creates a file, checking success
         private bool CreateFile()
         {
             bool success = true;
-            try { 
-                fs = new FileStream(Path, FileMode.Create);
-            } catch (IOException) {
-                success = false;
-            } finally {
-                if(!success)
-                {
-                    fs.Close();
-                }
-            }
+            fs = new FileStream(Path, FileMode.Create);
 
             return success;
         }
 
+        // Opens File, if already existant
         private bool OpenFile() {
             bool success = true;
-            try {
-                fs = new FileStream(Path, FileMode.Open);
-            }
-            catch (IOException) {
-                success = false;
-            } finally {
-                if(!success) {
-                    fs.Close();
-                }
-            }
+            fs = new FileStream(Path, FileMode.Open);
 
             return success;
         }

@@ -1,0 +1,14 @@
+C:\Users\wbhag\Desktop\Python Stuff\ScheduleMaker\ScheduleMaker\obj\Debug\ScheduleMaker.csproj.AssemblyReference.cache
+C:\Users\wbhag\Desktop\Python Stuff\ScheduleMaker\ScheduleMaker\obj\Debug\ScheduleMaker.csproj.SuggestedBindingRedirects.cache
+C:\Users\wbhag\Desktop\Python Stuff\ScheduleMaker\ScheduleMaker\obj\Debug\ScheduleMaker.Form1.resources
+C:\Users\wbhag\Desktop\Python Stuff\ScheduleMaker\ScheduleMaker\obj\Debug\ScheduleMaker.Properties.Resources.resources
+C:\Users\wbhag\Desktop\Python Stuff\ScheduleMaker\ScheduleMaker\obj\Debug\ScheduleMaker.csproj.GenerateResource.cache
+C:\Users\wbhag\Desktop\Python Stuff\ScheduleMaker\ScheduleMaker\obj\Debug\ScheduleMaker.csproj.CoreCompileInputs.cache
+C:\Users\wbhag\Desktop\Python Stuff\ScheduleMaker\ScheduleMaker\bin\Debug\ScheduleMaker.exe.config
+C:\Users\wbhag\Desktop\Python Stuff\ScheduleMaker\ScheduleMaker\bin\Debug\ScheduleMaker.exe
+C:\Users\wbhag\Desktop\Python Stuff\ScheduleMaker\ScheduleMaker\bin\Debug\ScheduleMaker.pdb
+C:\Users\wbhag\Desktop\Python Stuff\ScheduleMaker\ScheduleMaker\bin\Debug\Newtonsoft.Json.dll
+C:\Users\wbhag\Desktop\Python Stuff\ScheduleMaker\ScheduleMaker\bin\Debug\Newtonsoft.Json.xml
+C:\Users\wbhag\Desktop\Python Stuff\ScheduleMaker\ScheduleMaker\obj\Debug\ScheduleMaker.csproj.CopyComplete
+C:\Users\wbhag\Desktop\Python Stuff\ScheduleMaker\ScheduleMaker\obj\Debug\ScheduleMaker.exe
+C:\Users\wbhag\Desktop\Python Stuff\ScheduleMaker\ScheduleMaker\obj\Debug\ScheduleMaker.pdb

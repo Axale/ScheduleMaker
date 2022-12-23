@@ -5,22 +5,26 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ScheduleMaker {
+    internal class Courses {
+        public List<CourseObj> courses { get; set; }
+        public void InsertCourse(CourseObj To_Insert) {
+            courses.Add(To_Insert);
+        }
+
+    }
+
     internal class CourseObj {
-        public string Name;
-        public string CreditHours;
-        public string NumberOfMeetings;
-        public List<MeetingTime> MeetingTimes;
+        public string Name { get; set; }
+        public int CreditHours { get; set; }
+        public int NumberOfMeetings { get; set; }
+        public List<MeetingTime> MeetingList { get; set; }
 
         public class MeetingTime {
-            public string StartTime;
-            public string EndTime;
-            public string Type;
+            public string StartTime { get; set; }
+            public string EndTime { get; set; }
+            public string Day { get; set; }
+            public string Type { get; set; }
 
-            public MeetingTime(string g_Start, string g_End, string g_Type) {
-                StartTime = g_Start;
-                EndTime = g_End;
-                Type = g_Type;
-            }
         }
     }
 }
