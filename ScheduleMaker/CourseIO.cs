@@ -8,13 +8,13 @@ using System.IO;
 namespace ScheduleMaker
 {
     internal class CourseIO {
-        string Path { get; set; }
+        public string Path { get; set; }
         FileStream fs { get; set; }
         public string filestring { get; set; }
         public bool Failed { get; set; }
 
 
-        public CourseIO(string Given_Path) {
+        public bool OpenClassList(string Given_Path) {
             Path = Given_Path;
             if (!File.Exists(Path)) {
 
@@ -27,13 +27,16 @@ namespace ScheduleMaker
                     Failed = true;
                 }
             }
+
+            if(Failed) {
+                return false;
+            }
             byte[] buffer = new byte[(int) fs.Length];
             fs.Read(buffer, 0, (int) fs.Length);
             filestring = Encoding.ASCII.GetString(buffer);
 
-
+            return true;
         }
-
         public void CleanUp() {
             fs.Close();
         }
@@ -46,18 +49,32 @@ namespace ScheduleMaker
         // Creates a file, checking success
         private bool CreateFile()
         {
-            bool success = true;
-            fs = new FileStream(Path, FileMode.Create);
+            int dirlen;
+            for (dirlen = Path.Length - 1; dirlen >= 0 && Path[dirlen] != '/'; dirlen--) {
+            }
+            string filedir = Path.Substring(0, dirlen + 1);
+            try {
+                Directory.CreateDirectory(filedir);
+                fs = new FileStream(Path, FileMode.Create);
+            }
+            catch (Exception) {
+                return false;
+            }
 
-            return success;
+            return true;
         }
 
         // Opens File, if already existant
         private bool OpenFile() {
-            bool success = true;
-            fs = new FileStream(Path, FileMode.Open);
+            try {
+                fs = new FileStream(Path, FileMode.Open);
+            }
+            catch (Exception) {
+                return false;
+            }
 
-            return success;
+
+            return true;
         }
     }
 }

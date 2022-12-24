@@ -7,14 +7,28 @@ using System.Threading.Tasks;
 namespace ScheduleMaker {
     internal class Courses {
         public List<CourseObj> courses { get; set; }
+        public string CourseProgram;
+        public string Path;
         public void InsertCourse(CourseObj To_Insert) {
             courses.Add(To_Insert);
         }
 
+        public CourseObj FindCourse(string CourseNum) {
+            CourseObj To_Return = null;
+            for(int i = 0; i < courses.Count; i++) {
+                if(CourseNum == courses[i].CourseNum) {
+                    To_Return = courses[i];
+                }
+            }
+
+            return To_Return;
+        }
+
+
     }
 
     internal class CourseObj {
-        public string Name { get; set; }
+        public string CourseNum { get; set; }
         public int CreditHours { get; set; }
         public int NumberOfMeetings { get; set; }
         public List<MeetingTime> MeetingList { get; set; }
