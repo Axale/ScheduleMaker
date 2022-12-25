@@ -8,7 +8,7 @@ namespace ScheduleMaker {
     internal class Courses {
         public List<CourseObj> courses { get; set; }
         public string CourseProgram;
-        public string Path;
+        public string CourseDir;
         public void InsertCourse(CourseObj To_Insert) {
             courses.Add(To_Insert);
         }

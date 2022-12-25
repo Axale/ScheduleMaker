@@ -1,0 +1,13 @@
+﻿Done :
+File IO
+
+To Do : 
+Differing Meeting Times For Same Class !!!!!*
+Input Interface
+Calendar
+Interaction between Course Objects and Calendar
+Meeting Time Algorithms
+
+Options for differing meeting times: 
+	Use Single Instance of MeetingTime to have all Meeting Times that are linked together i.e. MWF classes are in one MeetingTime Instance
+	Use a list of all meeting times, but with some way of linking them

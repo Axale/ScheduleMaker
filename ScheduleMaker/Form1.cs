@@ -18,7 +18,7 @@ namespace ScheduleMaker
             CourseIO input = new CourseIO();
             input.OpenClassList("Classes/2023/Spring/ECE.json");
 
-            Courses CJson = new Courses { courses = new List<CourseObj> { }, Path = input.Path, CourseProgram = "ECE"};
+            Courses CJson = new Courses { courses = new List<CourseObj> { }, CourseDir = input.filedir, CourseProgram = "ECE"};
 
             
             string to_add = JsonConvert.SerializeObject(CJson);

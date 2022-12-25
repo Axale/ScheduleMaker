@@ -9,6 +9,7 @@ namespace ScheduleMaker
 {
     internal class CourseIO {
         public string Path { get; set; }
+        public string filedir { get; set; }
         FileStream fs { get; set; }
         public string filestring { get; set; }
         public bool Failed { get; set; }
@@ -50,9 +51,9 @@ namespace ScheduleMaker
         private bool CreateFile()
         {
             int dirlen;
-            for (dirlen = Path.Length - 1; dirlen >= 0 && Path[dirlen] != '/'; dirlen--) {
+            for (dirlen = Path.Length - 1; dirlen > 0 && Path[dirlen] != '/'; dirlen--) {
             }
-            string filedir = Path.Substring(0, dirlen + 1);
+            string filedir = Path.Substring(0, dirlen);
             try {
                 Directory.CreateDirectory(filedir);
                 fs = new FileStream(Path, FileMode.Create);
